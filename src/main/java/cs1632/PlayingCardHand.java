@@ -1,8 +1,9 @@
 package cs1632;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
-public class PlayingCardHand<T> {
+public class PlayingCardHand<T> implements Iterable<T>{
 	protected LinkedList<T> queueData;
 	
 	public PlayingCardHand() { 
@@ -28,5 +29,9 @@ public class PlayingCardHand<T> {
 	public boolean isEmpty() { 
 		return queueData.isEmpty(); 
 	}
-
+	
+	@Override
+	public Iterator<T> iterator() {
+		return queueData.iterator();
+	}
 }
