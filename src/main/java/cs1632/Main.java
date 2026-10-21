@@ -27,8 +27,8 @@ public class Main {
 			}
 			cardDeal++;
 		}
-		System.out.println("Cards dealt successfully!");
 		System.out.println("P1: " + p1Hand.size() + " cards | P2: " + p2Hand.size() + " cards");
+		System.out.println("Cards dealt successfully\n");
 		System.out.println("> Enter to continue");
 		sc.nextLine();
 		
@@ -46,9 +46,9 @@ public class Main {
 			System.out.println("ROUND " + round + ":");
 			// Card is popped
 			p1Card = p1Hand.pop();
-			System.out.println(p1Hand.size() + " | P1 plays: " + p1Card.cardName());
+			System.out.println((p1Hand.size() + 1) + " | P1 plays: " + p1Card.cardName());
 			p2Card = p2Hand.pop();
-			System.out.println(p2Hand.size() + " | P2 plays: " + p2Card.cardName());
+			System.out.println((p2Hand.size() + 1) + " | P2 plays: " + p2Card.cardName());
 			
 			// Cards' values are compared
 			winCon = p1Card.compareTo(p2Card);
@@ -104,9 +104,9 @@ public class Main {
 					
 					// Draw cards
 					p1WarCard = p1Hand.pop();
-					System.out.println(p1Hand.size() + " | P1 plays: " + p1WarCard.cardName());
+					System.out.println((p1Hand.size() + 1) + " | P1 plays: " + p1WarCard.cardName());
 					p2WarCard = p2Hand.pop();
-					System.out.println(p2Hand.size() + " | P2 plays: " + p2WarCard.cardName());
+					System.out.println((p2Hand.size() + 1) + " | P2 plays: " + p2WarCard.cardName());
 					
 					// P1 wins pot
 					if (p1WarCard.compareTo(p2WarCard) == 1) {
