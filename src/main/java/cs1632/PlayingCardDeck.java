@@ -6,6 +6,7 @@ import java.util.Random;
 public class PlayingCardDeck {
     private LinkedList<PlayingCard> cardDeck;
     public void newShuffle() {
+    	cardDeck.clear();
         PlayingCard [] cards = new PlayingCard[PlayingCard.CardValues.length * PlayingCard.SuitValues.length];
         int cn = 0;
         for (int cv = 0; cv < PlayingCard.CardValues.length; cv++) {
